@@ -16,7 +16,9 @@ const calcularBtn = () => {
 	let interes, meses;
 
 	// Validar valor
-	if (isNaN(valor)) {
+	if (isNaN(valor) || valor <= 0) {
+		document.getElementById("valor").type = "number";
+		document.getElementById("valor").value = "";
 		return alert("Introduzca un valor valido");
 	}
 
