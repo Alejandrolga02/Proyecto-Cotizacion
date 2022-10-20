@@ -36,8 +36,21 @@ body {
 	background-color: var(--primario);
 }
 
+main {
+	min-height: calc(100vh - 10rem - 10rem);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-height: 770px) {
+	main {
+		margin: 2rem 0;
+	}
+}
+
 .contenedor {
-	margin: 5rem auto;
 	display: flex;
 	flex-direction: column;
 	width: 54rem;
