@@ -27,13 +27,14 @@
 
     <main class="contenedor">
         <label for="valor">Valor del automovil</label>
-        <input type="text" name="valor" id="valor" placeholder="Introduzca un valor">
+        <input type="number" name="valor" id="valor" placeholder="Introduzca un valor">
         <label for="enganche">Enganche</label>
-        <input type="text" name="enganche" id="enganche" placeholder="Enganche">
+        <input type="text" name="enganche" id="enganche" placeholder="Enganche" readonly>
         <label for="totalFinanciar">Total a financiar</label>
-        <input type="text" name="totalFinanciar" id="totalFinanciar" placeholder="Total a financiar">
+        <input type="text" name="totalFinanciar" id="totalFinanciar" placeholder="Total a financiar" readonly>
         <label for="planCredito">Planes de credito</label>
         <select name="planCredito" id="planCredito">
+            <option value="-1" disabled selected>Seleccione un plan de credito</option>
             <option value="0">12 Meses</option>
             <option value="1">18 Meses</option>
             <option value="2">24 Meses</option>
@@ -41,9 +42,11 @@
             <option value="4">48 Meses</option>
         </select>
         <label for="pagoMensual">Pago Mensual</label>
-        <input type="text" name="pagoMensual" id="pagoMensual" placeholder="Pago Mensual">
-        <button class="boton calcular" id="btnCalcular">Calcular</button>
-        <button class="boton limpiar" id="btnLimpiar">Limpiar</button>
+        <input type="text" name="pagoMensual" id="pagoMensual" placeholder="Pago Mensual" readonly>
+        <div class="botones">
+            <button class="boton limpiar" id="btnLimpiar">Limpiar</button>
+            <button class="boton calcular" id="btnCalcular">Calcular</button>
+        </div>
     </main>
 
     <footer class="footer">
