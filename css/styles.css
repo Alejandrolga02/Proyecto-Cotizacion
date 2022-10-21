@@ -2,7 +2,6 @@
 	--primario: #4b89ac;
 	--secundario: #ace6f6;
 	--claro: #e4fcf9;
-	--fondo: #99dfec;
 	--boton: #3c6e8a;
 	--botonDarken: #30586e;
 	--negro: #212121;
@@ -57,25 +56,20 @@ main {
 	background-color: var(--secundario);
 }
 
-.contenedor > label {
+.contenedor>label {
 	font-size: 2rem;
 	margin-bottom: 0.5rem;
 	font-weight: 700;
 }
 
-.contenedor > input,
-.contenedor > select {
+.contenedor>input,
+.contenedor>select {
 	margin-bottom: 1rem;
 	padding: 0.5rem;
 	font-size: 1.5rem;
 	border-radius: 0.2rem;
 	border: var(--borde);
 	font-family: var(--fuente);
-}
-
-.contenedor > input:hover,
-.contenedor > select:hover {
-	border: var(--borde);
 }
 
 .botones {
@@ -92,21 +86,7 @@ main {
 	}
 }
 
-.limpiar {
-	background-color: var(--boton);
-	color: var(--blanco);
-}
-
-.limpiar:hover {
-	background-color: var(--botonDarken);
-}
-
-.calcular {
-	background-color: var(--boton);
-	color: var(--blanco);
-}
-
-.calcular:hover {
+.boton:hover {
 	background-color: var(--botonDarken);
 }
 
@@ -118,6 +98,15 @@ main {
 	font-weight: 500;
 	font-family: var(--fuente);
 	cursor: pointer;
+	background-color: var(--boton);
+	color: var(--blanco);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+	appearance: none;
 }
 
 h1 {

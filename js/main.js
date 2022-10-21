@@ -54,11 +54,11 @@ const calcularBtn = () => {
 	}
 
 	// Calcular resultados y mostrarlos
-	document.getElementById("enganche").value = (valor * 0.3).toFixed(2);
-	const enganche = document.getElementById("enganche").value;
-	document.getElementById("totalFinanciar").value = ((valor - enganche) + (valor * interes)).toFixed(2);
-	const financiar = document.getElementById("totalFinanciar").value;
-	document.getElementById("pagoMensual").value = (financiar / meses).toFixed(2);
+	const enganche = (valor * 0.3).toFixed(2);
+	document.getElementById("enganche").value = `$${enganche}`;
+	const financiar = ((valor - enganche) + ((valor - enganche) * interes)).toFixed(2);
+	document.getElementById("totalFinanciar").value = `$${financiar}`;
+	document.getElementById("pagoMensual").value = `$${(financiar / meses).toFixed(2)}`;
 };
 
 document.getElementById("btnLimpiar").addEventListener("click", limpiarBtn);
